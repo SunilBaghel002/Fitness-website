@@ -748,9 +748,9 @@ body.no-scroll {
   margin-left: auto;
   z-index: 3;
   filter: drop-shadow(0 0 0.5rem #8e2de2);
-    transition: var(--transition);
+  transition: var(--transition);
 }
-.hero-image:hover{
+.hero-image:hover {
   filter: drop-shadow(0 0 1rem #4a00e0);
   transform: scale(1.1);
 }
@@ -1094,7 +1094,7 @@ body.no-scroll {
   pointer-events: none;
   animation: particleFade 2s ease-out forwards;
 }
-.trainer-badge-inner{
+.trainer-badge-inner {
   background: linear-gradient(to right, #4a00e0, #8e2de2);
   animation: pulse 2s infinite;
   width: 100%;
@@ -1190,12 +1190,12 @@ body.no-scroll {
   }
 }
 
-@media (max-width: 750px){
-  .testimonial-bar{
+@media (max-width: 750px) {
+  .testimonial-bar {
     flex-direction: column;
     gap: 20px;
   }
-  .testimonial-divider{
+  .testimonial-divider {
     height: 3px;
     width: 100px;
   }
@@ -1442,7 +1442,6 @@ body.no-scroll {
   line-height: 1.2;
 }
 
-
 .trainer-contact {
   display: flex;
   gap: 1rem;
@@ -1457,9 +1456,13 @@ body.no-scroll {
   border-radius: 2rem;
   transition: var(--transition);
   box-shadow: 0 4px 12px rgba(255, 87, 51, 0.3);
-  display: flex;
-  width: fit-content;
-  margin: 10px auto;
+}
+@media (max-width: 991px) {
+  .trainer-contact-button {
+    display: flex;
+    width: fit-content;
+    margin: 10px auto;
+  }
 }
 
 .trainer-contact-button:hover {
@@ -1511,7 +1514,11 @@ body.no-scroll {
 .specialty-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, rgba(74, 0, 224, 0.1), rgba(142, 45, 226, 0.15));
+  background: linear-gradient(
+    135deg,
+    rgba(74, 0, 224, 0.1),
+    rgba(142, 45, 226, 0.15)
+  );
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -4951,21 +4958,20 @@ textarea.form-control {
   }
 }
 @media (max-width: 400px) {
-  .certificate-card{
+  .certificate-card {
     height: 420px;
   }
-  .certificate-back-title{
+  .certificate-back-title {
     font-size: 14px;
   }
-  .certificate-back-subtitle{
+  .certificate-back-subtitle {
     font-size: 12px;
   }
-  .certificate-skills{
+  .certificate-skills {
     font-size: 12px;
     margin-bottom: 10px;
   }
 }
-
 
 a {
   color: var(--primary-dark);
@@ -4976,7 +4982,6 @@ a {
 a:hover {
   color: var(--primary-light);
 }
-
 
 .section-padding {
   padding: var(--section-padding);
@@ -5003,7 +5008,6 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 .section-header h2::after {
   content: "";
@@ -5672,15 +5676,15 @@ a:hover {
   .popup-content {
     width: 100%;
   }
-  .triangle{
+  .triangle {
     position: relative;
     z-index: -1;
     border-top: 5px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 10px solid var(--secondary-color);
+    border-right: 10px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid var(--secondary-color);
   }
-  .popup-close{
+  .popup-close {
     width: 20px;
     height: 20px;
   }
