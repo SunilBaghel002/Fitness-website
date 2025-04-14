@@ -1456,6 +1456,10 @@ body.no-scroll {
   font-weight: 600;
   border-radius: 2rem;
   transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(255, 87, 51, 0.3);
+  display: flex;
+  width: fit-content;
+  margin: 10px auto;
 }
 
 .trainer-contact-button:hover {
@@ -1659,18 +1663,19 @@ body.no-scroll {
 }
 
 .about-cta-button {
-  display: inline-block;
+  display: flex;
   background: linear-gradient(90deg, #4a00e0, #8e2de2);
   color: white;
   font-weight: 600;
   font-size: 1rem;
   padding: 15px 35px;
   border-radius: 50px;
-  margin-top: 30px;
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 10px 20px rgba(74, 0, 224, 0.3);
+  margin: 30px auto;
+  width: fit-content;
 }
 
 .about-cta-button:hover {
@@ -4961,15 +4966,6 @@ textarea.form-control {
   }
 }
 
-/* h2 {
-    font-size: 2.25rem;
-    position: relative;
-  }
-  
-  p {
-    margin-bottom: 15px;
-    color: var(--medium-gray);
-  } */
 
 a {
   color: var(--primary-dark);
@@ -4981,11 +4977,6 @@ a:hover {
   color: var(--primary-light);
 }
 
-/* .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  } */
 
 .section-padding {
   padding: var(--section-padding);
@@ -5013,16 +5004,6 @@ a:hover {
   -webkit-text-fill-color: transparent;
 }
 
-/* .section-header h2 {
-    background: linear-gradient(
-      to right,
-      var(--primary-dark),
-      var(--primary-light)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-  } */
 
 .section-header h2::after {
   content: "";
@@ -5617,7 +5598,7 @@ a:hover {
   display: none; /* Hidden initially */
   position: fixed;
   bottom: 150px;
-  right: 5px;
+  right: 2px;
   width: fit-content;
   height: fit-content;
   /* background-color: rgba(0, 0, 0, 0.5);  */
@@ -5665,9 +5646,9 @@ a:hover {
 .triangle {
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 10px solid var(--secondary-color);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid var(--secondary-color);
 }
 @keyframes popup {
   0% {
@@ -5681,6 +5662,27 @@ a:hover {
 @media (max-width: 768px) {
   .open-bmi {
     right: 20px;
+  }
+
+  .popup {
+    flex-direction: row;
+    right: 70px;
+    bottom: 100px;
+  }
+  .popup-content {
+    width: 100%;
+  }
+  .triangle{
+    position: relative;
+    z-index: -1;
+    border-top: 5px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid var(--secondary-color);
+  }
+  .popup-close{
+    width: 20px;
+    height: 20px;
   }
 }
 

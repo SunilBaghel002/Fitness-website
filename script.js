@@ -577,38 +577,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Show success message
         contactForm.style.display = "none";
         formSubmitted.style.display = "block";
-
-        // In a real implementation, you would send the form data to a server here
-        // Example using fetch:
-        /*
-                    fetch('your-endpoint', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            name: document.getElementById('name').value,
-                            email: document.getElementById('email').value,
-                            message: document.getElementById('message').value
-                        })
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        contactForm.classList.remove('loading');
-                        contactForm.style.display = 'none';
-                        formSubmitted.style.display = 'block';
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        contactForm.classList.remove('loading');
-                        alert('There was an error sending your message. Please try again.');
-                    });
-                    */
       }, 1500);
     }
   });
@@ -1217,6 +1185,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const bmiClose = document.getElementById("bmi-close");
+  const popup = document.getElementById("bmiPopup");
   const bmiCalculator = document.getElementById("bmi-calculator");
   const openBmiCalculator = document.getElementById("open-bmi-calculator");
   const bmiContainer = document.querySelector(".bmi-container");
@@ -1242,6 +1211,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   openBmiCalculator.addEventListener("click", () => {
     bmiCalculator.classList.add("active");
+    popup.style.display = "none";
   });
 
   bmiClose.addEventListener("click", () => {
