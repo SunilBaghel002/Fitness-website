@@ -2,7 +2,7 @@
 
 A modern, responsive **fitness landing page** designed to promote gym or fitness-related services. This website serves as a **frontend-only** static site that highlights key features of a gym such as its programs, benefits, testimonials, and a call-to-action for new customers to join.
 
-🚀 **[Live Website →](https://sunilbaghel002.github.io/Fitness-website/)**
+🚀 **[Live Website →](https://fitness-website-topaz-pi.vercel.app/)**
 
 ---
 
